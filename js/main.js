@@ -2,6 +2,7 @@
 	
 	'use strict';
 
+
 	var isMobile = {
 		Android: function() {
 			return navigator.userAgent.match(/Android/i);
@@ -115,6 +116,7 @@
 		});
 	};
 
+	// Will show more projects when clicked
 	var skillsWayPoint = function() {
 		if ($('#fh5co-skills').length > 0 ) {
 			$('#fh5co-skills').waypoint( function( direction ) {
@@ -125,9 +127,7 @@
 				}
 			} , { offset: '90%' } );
 		}
-
 	};
-
 
 	// Loading page
 	var loaderPage = function() {

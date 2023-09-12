@@ -360,13 +360,13 @@ h1, h2, h3, h4, h5, h6, figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 .fh5co-social-icons li a {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   color: #5f4b8b;
   padding-left: 10px;
   padding-right: 10px;
@@ -836,6 +836,7 @@ h1, h2, h3, h4, h5, h6, figure {
   position: relative;
   overflow: hidden; /* This will ensure that the blog-text div doesn't overflow outside the parent */
 }
+
 @media screen and (max-width: 768px) {
   .fh5co-blog {
     width: 100%;
