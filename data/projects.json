@@ -1,0 +1,204 @@
+[
+  {
+    "slug": "knight-platformer",
+    "title": "Knight Platformer",
+    "year": "2022",
+    "cardSummary": "A 2D browser-playable platformer built in Godot as a hands-on game dev learning exercise.",
+    "summary": "A 2D platformer built in Godot to explore game development fundamentals — physics, movement, and level design — playable directly in the browser.",
+    "description": [
+      "Knight Platformer was a self-directed project to get hands-on experience with game development. Building it in Godot meant learning its scene system, physics engine, and GDScript while designing something actually fun to play.",
+      "The game runs entirely in the browser with smooth character movement using arrow keys or WASD, and a jump mechanic bound to Space. Shipping it as a web export made it easy to share without requiring any installation."
+    ],
+    "highlights": [
+      "Playable in the browser via Godot's HTML5 export",
+      "Supports keyboard controls (WASD / arrow keys + Space)",
+      "Built as a learning exercise in 2D game design and Godot's engine"
+    ],
+    "tech": [
+      "Godot"
+    ],
+    "thumbnail": "images/game_demo.gif",
+    "media": "images/game_demo.gif",
+    "github": "https://github.com/matheusdelimasilva/knight-game"
+  },
+  {
+    "slug": "fpga-wave-analyzer",
+    "title": "Embedded Board (FPGA) Wave Analyzer",
+    "year": "2023",
+    "cardSummary": "Real-time analysis and visualization of FPGA signals via UART.",
+    "summary": "A desktop tool for real-time inspection and visualization of FPGA signals to make embedded debugging faster and more intuitive.",
+    "description": [
+      "This project focused on improving the debugging experience for embedded systems work. The application receives signal data over UART and presents it in a more readable, interactive format.",
+      "It was especially useful for validating FPGA behavior during development, while also giving the user a cleaner workflow than raw serial output."
+    ],
+    "highlights": [
+      "Visualizes FPGA signals in real time",
+      "Reads serial data over UART",
+      "Built as a desktop GUI for debugging workflows"
+    ],
+    "tech": ["Python", "PyQt5", "Pandas", "UART", "FPGA"],
+    "thumbnail": "images/portfolio-8.jpg",
+    "media": "images/portfolio-8.jpg",
+    "github": "https://github.com/Polidori-112/JuniorDesign"
+  },
+  {
+    "slug": "financial-budget-simulator",
+    "title": "Financial Budget Simulator",
+    "year": "2023",
+    "cardSummary": "User-friendly GUI for data analysis and financial forecasting.",
+    "summary": "A GUI application for scenario planning, budgeting, and financial forecasting with a focus on clarity for non-technical users.",
+    "description": [
+      "I built this tool to turn financial analysis into a more interactive workflow. Instead of relying on static spreadsheets, users could test scenarios and inspect how assumptions affected projected outcomes.",
+      "The emphasis was on usability and clear visual feedback so that the tool could support practical decision-making."
+    ],
+    "highlights": [
+      "Interactive forecasting workflow",
+      "Designed for easy scenario exploration",
+      "Focused on approachable GUI-driven analysis"
+    ],
+    "tech": ["Python", "Data Analysis", "Forecasting", "GUI"],
+    "thumbnail": "images/portfolio-1.jpg",
+    "media": "images/portfolio-1.jpg"
+  },
+  {
+    "slug": "swarmbot",
+    "title": "Swarmbot",
+    "year": "2023",
+    "cardSummary": "Arduino robots with Wi-Fi communication.",
+    "summary": "A robotics project exploring wireless communication and coordination between small Arduino-based robots.",
+    "description": [
+      "Swarmbot explored how simple robots could exchange information and coordinate behavior over Wi-Fi. The project combined embedded programming, communication logic, and hands-on hardware integration.",
+      "It was a good example of working across both software and electronics to create a more dynamic robotics system."
+    ],
+    "highlights": [
+      "Arduino-based robot prototypes",
+      "Wireless communication between devices",
+      "Hands-on embedded and robotics integration"
+    ],
+    "tech": ["Arduino", "C++", "Wi-Fi", "Robotics"],
+    "thumbnail": "images/portfolio-2.jpg",
+    "media": "images/portfolio-2.jpg",
+    "github": "https://github.com/Polidori-112/JuniorDesign"
+  },
+  {
+    "slug": "energy-usage-predictor",
+    "title": "Energy Usage Predictor",
+    "year": "2022",
+    "cardSummary": "Machine learning project that predicts household energy usage.",
+    "summary": "A machine learning project for modeling and predicting household energy consumption from historical usage patterns.",
+    "description": [
+      "This project focused on forecasting residential energy usage using historical data and feature engineering. The goal was to understand how well a predictive model could capture consumption trends over time.",
+      "It was a strong end-to-end exercise in dataset preparation, model experimentation, and communicating results."
+    ],
+    "highlights": [
+      "Built and evaluated predictive models",
+      "Worked with time-based usage patterns",
+      "Explored feature engineering for forecast quality"
+    ],
+    "tech": ["Python", "Machine Learning", "Time Series", "Data Visualization"],
+    "thumbnail": "images/portfolio-3.jpg",
+    "media": "images/portfolio-3.jpg",
+    "github": "https://github.com/matheusdelimasilva/energyUsePredictorML"
+  },
+  {
+    "slug": "minigame-board",
+    "title": "Minigame Board",
+    "year": "2022",
+    "cardSummary": "Chrome's Dinosaur Game implemented in an FPGA.",
+    "summary": "An FPGA implementation of a familiar arcade-style game, combining digital design with real-time interaction.",
+    "description": [
+      "This project recreated a simple game experience directly in hardware, which made it a fun way to apply digital logic concepts in a visible, interactive format.",
+      "It required translating gameplay behavior into hardware-oriented thinking, including timing, input handling, and display logic."
+    ],
+    "highlights": [
+      "Implemented game logic on FPGA hardware",
+      "Applied digital systems concepts in practice",
+      "Built a hardware-driven interactive experience"
+    ],
+    "tech": ["FPGA", "VHDL", "Digital Design", "Embedded Systems"],
+    "thumbnail": "images/portfolio-4.jpg",
+    "media": "images/portfolio-4.jpg",
+    "github": "https://github.com/matheusdelimasilva/DinoRunGameVHDL"
+  },
+  {
+    "slug": "pdf-edit",
+    "title": "PDF Edit",
+    "year": "2025",
+    "cardSummary": "Python package for automating workflows in PDFs.",
+    "summary": "A lightweight Python package for automating repetitive PDF editing and document processing tasks.",
+    "description": [
+      "I built PDF Edit to simplify PDF-heavy workflows that usually take a lot of manual effort. The goal was to make repetitive document operations scriptable and dependable.",
+      "The project is structured as a reusable Python package, which makes it easy to integrate into larger data or operations pipelines."
+    ],
+    "highlights": [
+      "Automates repetitive PDF processing tasks",
+      "Packaged for reuse in different workflows",
+      "Designed to reduce manual document handling time"
+    ],
+    "tech": [
+      "Python",
+      "PDF Processing",
+      "Automation"
+    ],
+    "thumbnail": "images/portfolio-9.jpg",
+    "media": "images/portfolio-9.jpg",
+    "github": "https://github.com/matheusdelimasilva/PDF_Edit"
+  },
+  {
+    "slug": "robotic-hand",
+    "title": "Robotic Hand",
+    "year": "2023",
+    "cardSummary": "A robotics build focused on control, sensing, and physical interaction.",
+    "summary": "A robotics project centered on actuation, control, and building a physical system that can translate software logic into motion.",
+    "description": [
+      "The robotic hand project focused on connecting hardware control with real-world movement. Projects like this are especially valuable because they force software decisions to account for physical constraints and system behavior.",
+      "It combined experimentation in mechanics, embedded control, and iterative testing."
+    ],
+    "highlights": [
+      "Worked across software and hardware boundaries",
+      "Focused on actuation and physical control",
+      "Iterated through testing on a real device"
+    ],
+    "tech": ["Robotics", "Embedded Systems", "Control", "Hardware Prototyping"],
+    "thumbnail": "images/portfolio-5.jpg",
+    "media": "images/portfolio-5.jpg"
+  },
+  {
+    "slug": "web-scraping",
+    "title": "Web Scraping",
+    "year": "2022",
+    "cardSummary": "A program that acquires product data from ecommerce websites.",
+    "summary": "A data collection tool for extracting structured product information from ecommerce sites for downstream analysis.",
+    "description": [
+      "This project automated product-data collection from ecommerce websites so the results could be analyzed at scale instead of gathered manually.",
+      "The main challenge was building a workflow that was reliable enough for repeated use and useful for pricing or market analysis."
+    ],
+    "highlights": [
+      "Collected structured data from websites",
+      "Supported larger-scale product analysis",
+      "Reduced manual data gathering effort"
+    ],
+    "tech": ["Python", "Web Scraping", "Automation", "Data Collection"],
+    "thumbnail": "images/portfolio-6.jpg",
+    "media": "images/portfolio-6.jpg"
+  },
+  {
+    "slug": "image-processing-bot",
+    "title": "Image Processing Bot",
+    "year": "2017",
+    "cardSummary": "A Raspberry Pi robot that can follow objects using image processing.",
+    "summary": "A robotics project that combined computer vision and embedded hardware to let a robot track and follow objects.",
+    "description": [
+      "This was one of my earlier projects combining software, electronics, and image processing. The robot used a Raspberry Pi-based setup to interpret visual input and react to what it detected.",
+      "It was an important foundation for later work in robotics because it connected perception, decision-making, and motion in one system."
+    ],
+    "highlights": [
+      "Used image processing for object tracking",
+      "Built on Raspberry Pi hardware",
+      "Connected perception with robotic movement"
+    ],
+    "tech": ["Python", "Raspberry Pi", "Image Processing", "Robotics"],
+    "thumbnail": "images/portfolio-7.jpg",
+    "media": "images/portfolio-7.jpg"
+  }
+]

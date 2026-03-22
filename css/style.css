@@ -866,6 +866,20 @@ h1, h2, h3, h4, h5, h6, figure {
   opacity: 0.8; /* On hover, show the overlay */
 }
 
+.project-card-trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+.project-card-trigger:focus {
+  outline: 3px solid rgba(201, 168, 106, 0.7);
+  outline-offset: 6px;
+}
+
 .fh5co-blog .blog-text {
   position: absolute;
   bottom: 0;
@@ -935,6 +949,113 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .fh5co-blog .blog-text h3 a {
   color: black;
+}
+
+.projects-maintenance-note {
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.projects-maintenance-note code {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+}
+.projects-error {
+  color: #fff;
+}
+
+.project-modal .modal-content {
+  border: 0;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #f7f3ed;
+  color: #1f1f1f;
+}
+.project-modal .modal-dialog {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.project-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 28px;
+  line-height: 1;
+}
+.project-modal-body {
+  padding: 0;
+}
+.project-modal-media-wrap {
+  background: linear-gradient(135deg, #1d2935 0%, #32485f 100%);
+}
+.project-modal-media {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+}
+.project-modal-copy {
+  padding: 34px 34px 30px;
+}
+.project-modal-year {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8b6b3f;
+}
+.project-modal-summary {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+.project-modal-tags {
+  margin-bottom: 20px;
+}
+.project-tag {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #e9dfd0;
+  color: #5a4732;
+  font-size: 13px;
+  font-weight: 600;
+}
+.project-modal-description p {
+  margin-bottom: 16px;
+}
+.project-modal-highlights {
+  margin: 0 0 24px;
+  padding-left: 20px;
+}
+.project-modal-highlights li {
+  margin-bottom: 10px;
+}
+.project-modal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.project-link-btn {
+  min-width: 120px;
+}
+
+@media screen and (max-width: 768px) {
+  .project-modal-copy {
+    padding: 24px 20px;
+  }
+  .project-modal-media {
+    max-height: 260px;
+  }
 }
 
 #fh5co-consult {

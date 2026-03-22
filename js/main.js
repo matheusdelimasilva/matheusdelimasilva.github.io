@@ -134,8 +134,127 @@
 		$(".fh5co-loader").fadeOut("slow");
 	};
 
+	var escapeHtml = function(value) {
+		return String(value || '')
+			.replace(/&/g, '&amp;')
+			.replace(/</g, '&lt;')
+			.replace(/>/g, '&gt;')
+			.replace(/"/g, '&quot;')
+			.replace(/'/g, '&#39;');
+	};
+
+	var buildProjectCard = function(project, index) {
+		var techLabel = (project.tech && project.tech.length > 0) ? escapeHtml(project.tech[0]) : 'Project';
+
+		return [
+			'<div class="col-md-4 col-sm-6">',
+				'<div class="fh5co-blog project-card">',
+					'<button type="button" class="project-card-trigger" data-project-index="', index, '">',
+						'<span class="blog-bg" style="background-image: url(', escapeHtml(project.thumbnail), ');"></span>',
+						'<div class="blog-text">',
+							'<span class="posted_on">', escapeHtml(project.year), '</span>',
+							'<h3>', escapeHtml(project.title), '</h3>',
+							'<p>', escapeHtml(project.cardSummary), '</p>',
+							'<ul class="stuff">',
+								'<li>', techLabel, '</li>',
+								'<li><span>View details <i class="icon-arrow-right22"></i></span></li>',
+							'</ul>',
+						'</div>',
+					'</button>',
+				'</div>',
+			'</div>'
+		].join('');
+	};
+
+	var renderProjectModal = function(project) {
+		var $modal = $('#project-modal');
+		var $media = $('#project-modal-media');
+		var tagsHtml = '';
+		var descriptionHtml = '';
+		var highlightsHtml = '';
+		var linksHtml = '';
+
+		$('#project-modal-title').text(project.title || '');
+		$('#project-modal-year').text(project.year || '');
+		$('#project-modal-summary').text(project.summary || '');
+
+		if (project.media) {
+			$media.attr('src', project.media);
+			$media.attr('alt', project.title || 'Project media');
+			$media.show();
+		} else {
+			$media.hide();
+		}
+
+		if (project.tech && project.tech.length) {
+			tagsHtml = project.tech.map(function(item) {
+				return '<span class="project-tag">' + escapeHtml(item) + '</span>';
+			}).join('');
+		}
+		$('#project-modal-tags').html(tagsHtml);
+
+		if (project.description && project.description.length) {
+			descriptionHtml = project.description.map(function(paragraph) {
+				return '<p>' + escapeHtml(paragraph) + '</p>';
+			}).join('');
+		}
+		$('#project-modal-description').html(descriptionHtml);
+
+		if (project.highlights && project.highlights.length) {
+			highlightsHtml = project.highlights.map(function(item) {
+				return '<li>' + escapeHtml(item) + '</li>';
+			}).join('');
+		}
+		$('#project-modal-highlights').html(highlightsHtml);
+
+		if (project.github) {
+			linksHtml += '<a class="btn btn-primary btn-sm project-link-btn" href="' + escapeHtml(project.github) + '" target="_blank" rel="noopener">GitHub</a>';
+		}
+		if (project.demo) {
+			linksHtml += '<a class="btn btn-default btn-sm project-link-btn" href="' + escapeHtml(project.demo) + '" target="_blank" rel="noopener">Live Demo</a>';
+		}
+		$('#project-modal-links').html(linksHtml);
+
+		$modal.modal('show');
+	};
+
+	var loadProjects = function() {
+		var $projectsGrid = $('#projects-grid');
+
+		if ($projectsGrid.length === 0) {
+			return;
+		}
+
+		fetch('data/projects.json')
+			.then(function(response) {
+				if (!response.ok) {
+					throw new Error('Unable to load projects.json');
+				}
+				return response.json();
+			})
+			.then(function(projects) {
+				var cardsHtml = projects.map(function(project, index) {
+					return buildProjectCard(project, index);
+				}).join('');
+
+				$projectsGrid.html(cardsHtml);
+				$projectsGrid.on('click', '.project-card-trigger', function() {
+					var projectIndex = parseInt($(this).attr('data-project-index'), 10);
+					renderProjectModal(projects[projectIndex]);
+				});
+			})
+			.catch(function() {
+				$projectsGrid.html(
+					'<div class="col-md-12 text-center">' +
+						'<p class="projects-error">Projects could not be loaded. Please check <code>data/projects.json</code>.</p>' +
+					'</div>'
+				);
+			});
+	};
+
 	
 	$(function(){
+		loadProjects();
 		contentWayPoint();
 		goToTop();
 		loaderPage();
