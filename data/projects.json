@@ -1,5 +1,38 @@
 [
   {
+    "slug": "job-pilot",
+    "title": "JobPilot - AI Agent",
+    "year": "2026",
+    "cardSummary": "AI agent that tailors your resume and applies for jobs autonomously.",
+    "summary": "An AI-powered job application agent that enriches postings, tailors resumes, generates cover letters, and drives browser-based auto-apply — with intentional human-in-the-loop review before anything gets submitted.",
+    "description": [
+      "JobPilot is a CLI-driven agent that takes a job URL and handles the full application pipeline: scraping the posting, enriching it with extracted details, and tailoring a resume specifically for that role. Before anything gets submitted, it pauses for human review so you can inspect and edit the resume — keeping sensitive materials fully under your control.",
+      "After confirmation, the agent regenerates the PDF, writes a cover letter, and launches the apply pipeline using browser automation. An optional --assist mode lets the agent pause mid-apply when it hits human-only blockers like email verification or MFA, wait for you to resolve them, and then resume — making it resilient against the friction that breaks fully autonomous tools.",
+      "Resume output supports two modes: a structured plain-text format for pipeline compatibility, and a LaTeX mode using b8tex/Tectonic for higher-fidelity formatting. All artifacts are stored alongside job state in a local SQLite database, making it easy to track where each application stands."
+    ],
+    "highlights": [
+      "Human-in-the-loop confirmation before resume submission — review and edit before anything is sent",
+      "LaTeX-based resume generation via Tectonic for professional, template-driven PDF output",
+      "--assist mode lets the apply agent pause for human intervention on blockers like MFA or email verification, then resume",
+      "Full pipeline: URL ingestion → posting enrichment → resume tailoring → cover letter → browser auto-apply",
+      "SQLite-backed job state tracks artifacts and pipeline progress across sessions"
+    ],
+    "tech": [
+      "Python",
+      "Typer",
+      "SQLite",
+      "Playwright",
+      "Claude API",
+      "Firecrawl",
+      "LaTeX",
+      "Tectonic",
+      "Browser Automation"
+    ],
+    "thumbnail": "images/jobpilot.png",
+    "media": "images/jobpilot.png",
+    "github": "https://github.com/matheusdelimasilva/JobPilot"
+  },
+  {
     "slug": "knight-platformer",
     "title": "Knight Platformer",
     "year": "2022",
